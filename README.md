@@ -1,6 +1,6 @@
 # TestApp
 
-该项目用来说明如何使用 TestCaseCollector 库
+该项目用来说明如何在 objective-c 项目中使用 TestCaseCollector 库
 
 ## 使用步骤
 
