@@ -27,7 +27,9 @@ pod 'TestCaseCollector', '0.0.1'
 ];
 ```
 
-4. 运行测试并查看收集到的用例信息(在控制台中可以看到 test_cases_info.json 文件路径), 以本项目为例, 生成的 test_cases_info.json 文件内容如下:
+## 查看收集到的用例信息
+
+运行测试并查看收集到的用例信息(在控制台中可以看到 test_cases_info.json 文件路径), 以本项目为例, 生成的 test_cases_info.json 文件内容如下:
 
 ```json
 {
