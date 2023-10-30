@@ -1,4 +1,4 @@
-# TestApp
+# TestAppForIOS
 
 该项目用来说明如何在 objective-c 项目中使用 TestCaseCollector 库
 
