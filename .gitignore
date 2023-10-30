@@ -4,3 +4,4 @@ Podfile.lock
 *.xcworkspace
 .git
 .DS_Store
+output

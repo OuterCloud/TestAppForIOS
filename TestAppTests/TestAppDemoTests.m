@@ -8,6 +8,7 @@
 #import <XCTest/XCTest.h>
 #import <objc/runtime.h>
 #import "TestCaseCollector.h"
+#import "DebugTestCaseCollector.h"
 
 @interface TestAppDemoTests : XCTestCase
 
@@ -50,6 +51,20 @@
                                               caseDesc:@"测试用例描述" // 用例描述
                                              caseOwner:@"tianyou.lan" // 用例负责人
                                        subModuleCNName:@"子模块名" // 子模块名
+    ];
+    
+    // 执行测试用例
+    NSLog(@"执行测试用例");
+}
+
+- (void)testDebug {
+    
+    // 收集用例信息
+    [[[DebugTestCaseCollector alloc] init] collectClassName:NSStringFromClass([self class])
+                                                 methodName:NSStringFromSelector(_cmd)
+                                                   caseDesc:@"测试用例描述" // 用例描述
+                                                  caseOwner:@"tianyou.lan" // 用例负责人
+                                            subModuleCNName:@"子模块名" // 子模块名
     ];
     
     // 执行测试用例

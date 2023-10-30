@@ -19,18 +19,12 @@
 		CB77304E2AEF8922000F0C43 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CB77304D2AEF8922000F0C43 /* Podfile */; };
 		CB7730502AEF8BA4000F0C43 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CB77304F2AEF8BA4000F0C43 /* README.md */; };
 		CB7730582AEF9D5F000F0C43 /* TestAppUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7730572AEF9D5F000F0C43 /* TestAppUnitTests.m */; };
+		CB77305F2AEFC9EF000F0C43 /* DebugTestCaseCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = CB77305E2AEFC9EF000F0C43 /* DebugTestCaseCollector.m */; };
 		F7802511A7DD103DE239554E /* libPods-TestAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E6C76629703318BA288474 /* libPods-TestAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CB7730132AEB9177000F0C43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB772FEF2AEB9176000F0C43 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB772FF62AEB9176000F0C43;
-			remoteInfo = TestApp;
-		};
-		CB77301D2AEB9177000F0C43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB772FEF2AEB9176000F0C43 /* Project object */;
 			proxyType = 1;
@@ -66,11 +60,12 @@
 		CB77300C2AEB9177000F0C43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB7730122AEB9177000F0C43 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7730162AEB9177000F0C43 /* TestAppDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppDemoTests.m; sourceTree = "<group>"; };
-		CB77301C2AEB9177000F0C43 /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB77304D2AEF8922000F0C43 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CB77304F2AEF8BA4000F0C43 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB7730552AEF9D5F000F0C43 /* TestAppUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7730572AEF9D5F000F0C43 /* TestAppUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppUnitTests.m; sourceTree = "<group>"; };
+		CB77305E2AEFC9EF000F0C43 /* DebugTestCaseCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugTestCaseCollector.m; sourceTree = "<group>"; };
+		CB7730602AEFCA0F000F0C43 /* DebugTestCaseCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugTestCaseCollector.h; sourceTree = "<group>"; };
 		EE790568CE25D271CF2D6B45 /* Pods-TestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TestAppTests/Pods-TestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,13 +82,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7802511A7DD103DE239554E /* libPods-TestAppTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB7730192AEB9177000F0C43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +135,6 @@
 			children = (
 				CB772FF72AEB9176000F0C43 /* TestApp.app */,
 				CB7730122AEB9177000F0C43 /* TestAppTests.xctest */,
-				CB77301C2AEB9177000F0C43 /* TestAppUITests.xctest */,
 				CB7730552AEF9D5F000F0C43 /* TestAppUnitTests.xctest */,
 			);
 			name = Products;
@@ -175,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				CB7730162AEB9177000F0C43 /* TestAppDemoTests.m */,
+				CB77305E2AEFC9EF000F0C43 /* DebugTestCaseCollector.m */,
+				CB7730602AEFCA0F000F0C43 /* DebugTestCaseCollector.h */,
 			);
 			path = TestAppTests;
 			sourceTree = "<group>";
@@ -226,24 +215,6 @@
 			productReference = CB7730122AEB9177000F0C43 /* TestAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CB77301B2AEB9177000F0C43 /* TestAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB77302C2AEB9177000F0C43 /* Build configuration list for PBXNativeTarget "TestAppUITests" */;
-			buildPhases = (
-				CB7730182AEB9177000F0C43 /* Sources */,
-				CB7730192AEB9177000F0C43 /* Frameworks */,
-				CB77301A2AEB9177000F0C43 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB77301E2AEB9177000F0C43 /* PBXTargetDependency */,
-			);
-			name = TestAppUITests;
-			productName = TestAppUITests;
-			productReference = CB77301C2AEB9177000F0C43 /* TestAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		CB7730542AEF9D5F000F0C43 /* TestAppUnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB77305B2AEF9D5F000F0C43 /* Build configuration list for PBXNativeTarget "TestAppUnitTests" */;
@@ -279,10 +250,6 @@
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = CB772FF62AEB9176000F0C43;
 					};
-					CB77301B2AEB9177000F0C43 = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = CB772FF62AEB9176000F0C43;
-					};
 					CB7730542AEF9D5F000F0C43 = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = CB772FF62AEB9176000F0C43;
@@ -304,7 +271,6 @@
 			targets = (
 				CB772FF62AEB9176000F0C43 /* TestApp */,
 				CB7730112AEB9177000F0C43 /* TestAppTests */,
-				CB77301B2AEB9177000F0C43 /* TestAppUITests */,
 				CB7730542AEF9D5F000F0C43 /* TestAppUnitTests */,
 			);
 		};
@@ -327,13 +293,6 @@
 			files = (
 				CB7730502AEF8BA4000F0C43 /* README.md in Resources */,
 				CB77304E2AEF8922000F0C43 /* Podfile in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB77301A2AEB9177000F0C43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,13 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7730172AEB9177000F0C43 /* TestAppDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB7730182AEB9177000F0C43 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CB77305F2AEFC9EF000F0C43 /* DebugTestCaseCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,11 +388,6 @@
 			isa = PBXTargetDependency;
 			target = CB772FF62AEB9176000F0C43 /* TestApp */;
 			targetProxy = CB7730132AEB9177000F0C43 /* PBXContainerItemProxy */;
-		};
-		CB77301E2AEB9177000F0C43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB772FF62AEB9176000F0C43 /* TestApp */;
-			targetProxy = CB77301D2AEB9177000F0C43 /* PBXContainerItemProxy */;
 		};
 		CB77305A2AEF9D5F000F0C43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -688,38 +636,6 @@
 			};
 			name = Release;
 		};
-		CB77302D2AEB9177000F0C43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DCM8Y9779K;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jidu.TestAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestApp;
-			};
-			name = Debug;
-		};
-		CB77302E2AEB9177000F0C43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DCM8Y9779K;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jidu.TestAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestApp;
-			};
-			name = Release;
-		};
 		CB77305C2AEF9D5F000F0C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04B346701F5C5015286DFD0E /* Pods-TestAppUnitTests.debug.xcconfig */;
@@ -782,15 +698,6 @@
 			buildConfigurations = (
 				CB77302A2AEB9177000F0C43 /* Debug */,
 				CB77302B2AEB9177000F0C43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB77302C2AEB9177000F0C43 /* Build configuration list for PBXNativeTarget "TestAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB77302D2AEB9177000F0C43 /* Debug */,
-				CB77302E2AEB9177000F0C43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
