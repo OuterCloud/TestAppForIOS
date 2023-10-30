@@ -5,3 +5,5 @@ Podfile.lock
 .git
 .DS_Store
 output
+results
+results.xcresult
