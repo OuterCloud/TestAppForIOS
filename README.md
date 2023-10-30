@@ -10,13 +10,13 @@
 pod 'TestCaseCollector', '0.0.1'
 ```
 
-2. 在测试 .m 文件中引用 TestCaseCollector
+2. 修改测试方法所在的 .m 文件, 引用 TestCaseCollector:
 
 ```objective-c
 #import "TestCaseCollector.h"
 ```
 
-3. 在测试方法的开头添加以下代码行, 以收集用例信息
+3. 修改测试方法, 在测试方法的开头添加以下代码行以收集用例信息:
 
 ```objective-c
 [[[TestCaseCollector alloc] init] collectClassName:NSStringFromClass([self class])
