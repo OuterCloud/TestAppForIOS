@@ -4,9 +4,7 @@
 
 ## 使用步骤
 
-1. 修改 Podfile
-
-针对需要安装 TestCollector 的 target 添加如下内容(详见 Podfile):
+1. 修改 Podfile, 针对需要安装 TestCollector 的 target 添加如下内容(详见 Podfile):
 
 ```
 pod 'TestCaseCollector', '0.0.1'
