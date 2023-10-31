@@ -7,7 +7,7 @@
 1. 修改 Podfile, 针对需要安装 TestCollector 的 target 添加如下内容(详见 Podfile):
 
 ```
-pod 'TestCaseCollector', '0.0.1'
+pod 'TestCaseCollector', '0.0.2'
 ```
 
 2. 修改测试方法所在的 .m 文件, 引用 TestCaseCollector:
@@ -34,72 +34,89 @@ pod 'TestCaseCollector', '0.0.1'
 ```json
 {
   "TestAppUnitTests.TestAppUnitTests.testExampleForShort" : {
-    "modName" : "iOS自动化测试",
-    "dataReport" : 1,
-    "caseTags" : [
+    "sub_module_cn_name" : "子模块名",
+    "class_name" : "TestAppUnitTests",
+    "mod_name" : "iOS自动化测试",
+    "case_tags" : [
       "冒烟测试"
     ],
-    "methodName" : "testExampleForShort",
-    "className" : "TestAppUnitTests",
-    "subModuleCNName" : "子模块名",
-    "caseLevel" : "P0",
-    "os" : "iOS",
     "source" : "iOS自动化测试.子模块名",
-    "caseOwner" : "tianyou.lan",
-    "caseDesc" : "测试用例描述",
-    "targetName" : "TestAppUnitTests",
-    "caseType" : "移动端测试"
+    "os" : "iOS",
+    "method_name" : "testExampleForShort",
+    "case_level" : "P0",
+    "target_name" : "TestAppUnitTests",
+    "case_type" : "移动端测试",
+    "case_owner" : "tianyou.lan",
+    "data_report" : 1,
+    "case_desc" : "测试用例描述"
+  },
+  "TestAppTests.TestAppDemoTests.testDebug" : {
+    "sub_module_cn_name" : "子模块名",
+    "class_name" : "TestAppDemoTests",
+    "mod_name" : "iOS自动化测试",
+    "case_tags" : [
+      "冒烟测试"
+    ],
+    "source" : "iOS自动化测试.子模块名",
+    "os" : "iOS",
+    "method_name" : "testDebug",
+    "case_level" : "P1",
+    "target_name" : "TestAppTests",
+    "case_type" : "移动端测试",
+    "case_owner" : "tianyou.lan",
+    "data_report" : "0",
+    "case_desc" : "测试用例描述"
   },
   "TestAppTests.TestAppDemoTests.testExample" : {
-    "modName" : "iOS自动化测试",
-    "dataReport" : 1,
-    "caseTags" : [
+    "sub_module_cn_name" : "子模块名",
+    "class_name" : "TestAppDemoTests",
+    "mod_name" : "iOS自动化测试",
+    "case_tags" : [
       "回归测试"
     ],
-    "methodName" : "testExample",
-    "className" : "TestAppDemoTests",
-    "subModuleCNName" : "子模块名",
-    "caseLevel" : "P0",
-    "os" : "iOS",
     "source" : "iOS自动化测试.子模块名",
-    "caseOwner" : "tianyou.lan",
-    "caseDesc" : "测试用例描述",
-    "targetName" : "TestAppTests",
-    "caseType" : "移动端测试"
+    "os" : "iOS",
+    "method_name" : "testExample",
+    "case_level" : "P0",
+    "target_name" : "TestAppTests",
+    "case_type" : "移动端测试",
+    "case_owner" : "tianyou.lan",
+    "data_report" : 1,
+    "case_desc" : "测试用例描述"
   },
   "TestAppTests.TestAppDemoTests.testExampleForShort" : {
-    "modName" : "iOS自动化测试",
-    "dataReport" : 1,
-    "caseTags" : [
+    "sub_module_cn_name" : "子模块名",
+    "class_name" : "TestAppDemoTests",
+    "mod_name" : "iOS自动化测试",
+    "case_tags" : [
       "冒烟测试"
     ],
-    "methodName" : "testExampleForShort",
-    "className" : "TestAppDemoTests",
-    "subModuleCNName" : "子模块名",
-    "caseLevel" : "P0",
-    "os" : "iOS",
     "source" : "iOS自动化测试.子模块名",
-    "caseOwner" : "tianyou.lan",
-    "caseDesc" : "测试用例描述",
-    "targetName" : "TestAppTests",
-    "caseType" : "移动端测试"
+    "os" : "iOS",
+    "method_name" : "testExampleForShort",
+    "case_level" : "P0",
+    "target_name" : "TestAppTests",
+    "case_type" : "移动端测试",
+    "case_owner" : "tianyou.lan",
+    "data_report" : 1,
+    "case_desc" : "测试用例描述"
   },
   "TestAppUnitTests.TestAppUnitTests.testExample" : {
-    "modName" : "iOS自动化测试",
-    "dataReport" : 1,
-    "caseTags" : [
+    "sub_module_cn_name" : "子模块名",
+    "class_name" : "TestAppUnitTests",
+    "mod_name" : "iOS自动化测试",
+    "case_tags" : [
       "回归测试"
     ],
-    "methodName" : "testExample",
-    "className" : "TestAppUnitTests",
-    "subModuleCNName" : "子模块名",
-    "caseLevel" : "P0",
-    "os" : "iOS",
     "source" : "iOS自动化测试.子模块名",
-    "caseOwner" : "tianyou.lan",
-    "caseDesc" : "测试用例描述",
-    "targetName" : "TestAppUnitTests",
-    "caseType" : "移动端测试"
+    "os" : "iOS",
+    "method_name" : "testExample",
+    "case_level" : "P0",
+    "target_name" : "TestAppUnitTests",
+    "case_type" : "移动端测试",
+    "case_owner" : "tianyou.lan",
+    "data_report" : 1,
+    "case_desc" : "测试用例描述"
   }
 }
 ```

@@ -60,12 +60,15 @@
 - (void)testDebug {
     
     // 收集用例信息
-    [[[DebugTestCaseCollector alloc] init] collectClassName:NSStringFromClass([self class])
-                                                 methodName:NSStringFromSelector(_cmd)
-                                                   caseDesc:@"测试用例描述" // 用例描述
-                                                  caseOwner:@"tianyou.lan" // 用例负责人
-                                            subModuleCNName:@"子模块名" // 子模块名
+    DebugTestCaseCollector *collector = [[DebugTestCaseCollector alloc] init];
+    [collector collectClassName:NSStringFromClass([self class])
+                     methodName:NSStringFromSelector(_cmd)
+                       caseDesc:@"测试用例描述" // 用例描述
+                      caseOwner:@"tianyou.lan" // 用例负责人
+                subModuleCNName:@"子模块名" // 子模块名
     ];
+    [collector updateCaseField:@"caseLevel" withValue:@"P1"];
+    [collector updateCaseField:@"dataReport" withValue:@"0"];
     
     // 执行测试用例
     NSLog(@"执行测试用例");

@@ -12,20 +12,20 @@
 
 @interface DebugTestCaseCollector : NSObject
 
-@property (nonatomic, strong) NSString *fileName;
-@property (nonatomic, strong) NSString *className;
 @property (nonatomic, strong) NSString *methodName;
+@property (nonatomic, strong) NSString *className;
 @property (nonatomic, strong) NSString *targetName;
+@property (nonatomic, strong) NSString *caseType;
 @property (nonatomic, strong) NSString *caseDesc;
 @property (nonatomic, strong) NSString *caseLevel;
-@property (nonatomic, strong) NSString *subModuleCNName;
 @property (nonatomic, strong) NSString *caseOwner;
 @property (nonatomic, strong) NSArray *caseTags;
-@property (nonatomic, strong) NSString *caseType;
 @property (nonatomic, strong) NSString *modName;
+@property (nonatomic, strong) NSString *subModuleCNName;
 @property (nonatomic, strong) NSString *source;
 @property (nonatomic, strong) NSNumber *dataReport;
 @property (nonatomic, strong) NSMutableDictionary *customFields;
+@property (nonatomic, strong) NSString *caseInfoJsonPath;
 
 - (void)collectClassName:(NSString *)className
               methodName:(NSString *)methodName
@@ -43,8 +43,9 @@
                caseOwner:(NSString *)caseOwner
          subModuleCNName:(NSString *)subModuleCNName;
 - (void)addCustomField:(NSString *)field forKey:(NSString *)key;
-- (void)saveDataToFile:(NSString *)filePath;
-- (NSString *)getCurrentTestCaseTargetName;
+- (void)saveCasesInfo;
+- (NSString *)getCurrentTestTargetName;
+- (void)updateCaseField:(id)name withValue:(NSString *)value;
 
 @end
 

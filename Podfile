@@ -6,9 +6,9 @@ source 'https://cdn.cocoapods.org/'
 platform :ios, '10.10'
 
 target 'TestAppTests' do
-  pod 'TestCaseCollector', '0.0.1'
+  pod 'TestCaseCollector', '0.0.2'
 end
 
 target 'TestAppUnitTests' do
-  pod 'TestCaseCollector', '0.0.1'
+  pod 'TestCaseCollector', '0.0.2'
 end
