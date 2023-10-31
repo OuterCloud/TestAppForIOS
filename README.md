@@ -7,7 +7,7 @@
 1. 修改 Podfile, 针对需要安装 TestCollector 的 target 添加如下内容(详见 Podfile):
 
 ```
-pod 'TestCaseCollector', '0.0.2'
+pod 'TestCaseCollector', '0.0.3'
 ```
 
 2. 修改测试方法所在的 .m 文件, 引用 TestCaseCollector:
@@ -45,7 +45,7 @@ pod 'TestCaseCollector', '0.0.2'
     "method_name" : "testExampleForShort",
     "case_level" : "P0",
     "target_name" : "TestAppUnitTests",
-    "case_type" : "移动端测试",
+    "case_type" : "客户端测试",
     "case_owner" : "tianyou.lan",
     "data_report" : 1,
     "case_desc" : "测试用例描述"
@@ -62,7 +62,7 @@ pod 'TestCaseCollector', '0.0.2'
     "method_name" : "testDebug",
     "case_level" : "P1",
     "target_name" : "TestAppTests",
-    "case_type" : "移动端测试",
+    "case_type" : "客户端测试",
     "case_owner" : "tianyou.lan",
     "data_report" : "0",
     "case_desc" : "测试用例描述"
@@ -79,7 +79,7 @@ pod 'TestCaseCollector', '0.0.2'
     "method_name" : "testExample",
     "case_level" : "P0",
     "target_name" : "TestAppTests",
-    "case_type" : "移动端测试",
+    "case_type" : "客户端测试",
     "case_owner" : "tianyou.lan",
     "data_report" : 1,
     "case_desc" : "测试用例描述"
@@ -96,7 +96,7 @@ pod 'TestCaseCollector', '0.0.2'
     "method_name" : "testExampleForShort",
     "case_level" : "P0",
     "target_name" : "TestAppTests",
-    "case_type" : "移动端测试",
+    "case_type" : "客户端测试",
     "case_owner" : "tianyou.lan",
     "data_report" : 1,
     "case_desc" : "测试用例描述"
@@ -113,7 +113,7 @@ pod 'TestCaseCollector', '0.0.2'
     "method_name" : "testExample",
     "case_level" : "P0",
     "target_name" : "TestAppUnitTests",
-    "case_type" : "移动端测试",
+    "case_type" : "客户端测试",
     "case_owner" : "tianyou.lan",
     "data_report" : 1,
     "case_desc" : "测试用例描述"

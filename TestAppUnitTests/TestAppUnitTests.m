@@ -32,7 +32,7 @@
     NSString *modName = @"iOS自动化测试"; // 用例模块名
     NSString *subModuleCNName = @"子模块名"; // 子模块名
     NSString *caseOwner = @"tianyou.lan"; // 用例负责人
-    NSString *caseType = @"移动端测试"; // 用例类型
+    NSString *caseType = @"客户端测试"; // 用例类型
     NSArray *caseTags = @[@"回归测试"]; // 用例标签
     NSNumber *dataReport = @1; // 是否上报用例: 1-上报; 0-不上报
     [[[TestCaseCollector alloc] init] collectClassName:className methodName:methodName caseDesc:caseDesc caseLevel:caseLevel subModuleCNName:subModuleCNName caseOwner:caseOwner caseTags:caseTags caseType:caseType modName:modName dataReport:dataReport];

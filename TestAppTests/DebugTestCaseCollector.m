@@ -29,7 +29,7 @@
     // 设置默认值
     NSString *caseLevel = @"P0";
     NSArray *caseTags = [NSArray arrayWithObjects:@"冒烟测试", nil];
-    NSString *caseType = @"移动端测试";
+    NSString *caseType = @"客户端测试";
     NSNumber *dataReport = @1;
     NSString *modName = @"iOS自动化测试";
     
